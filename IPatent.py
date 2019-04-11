@@ -28,6 +28,7 @@ class IPatent:
             roi = Image.fromarray(roi)
             str1 = self.__recognizer.recognize(roi)
             print(str1)
+            box["license"] = str1
             if cv2.waitKey(0)==0:
                 break
 
